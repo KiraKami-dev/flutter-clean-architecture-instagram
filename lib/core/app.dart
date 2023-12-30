@@ -38,8 +38,8 @@ class MyApp extends StatelessWidget {
           theme: AppTheme.light,
           darkTheme: AppTheme.dark,
           themeMode: ThemeOfApp.theme,
-
-          home: AnimatedSplashScreen.withScreenFunction(
+          home: 
+          AnimatedSplashScreen.withScreenFunction(
             screenFunction: screenFunction,
             centered: true,
             splash: IconsAssets.splashIcon,
@@ -54,7 +54,8 @@ class MyApp extends StatelessWidget {
 
 Future<Widget> screenFunction() async {
   String? myId = await initializeDefaultValues();
-
+  print("This is my ID");
+  print(myId);
   return myId == null
       ? const LoginPage()
       : GetMyPersonalInfo(myPersonalId: myId);

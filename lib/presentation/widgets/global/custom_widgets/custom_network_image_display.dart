@@ -75,9 +75,9 @@ class _NetworkDisplayState extends State<NetworkDisplay> {
       fit: BoxFit.cover,
       width: widget.width ?? double.infinity,
       height: widget.height ?? height,
-      placeholderBuilder: widget.blurHash.isNotEmpty
-          ? OctoPlaceholder.blurHash(widget.blurHash, fit: BoxFit.cover)
-          : (context) => Center(child: loadingWidget()),
+      // placeholderBuilder: widget.blurHash.isNotEmpty
+      //     ? OctoPlaceholder.blurHash(widget.blurHash, fit: BoxFit.cover)
+      //     : (context) => Center(child: loadingWidget()),
     );
   }
 
